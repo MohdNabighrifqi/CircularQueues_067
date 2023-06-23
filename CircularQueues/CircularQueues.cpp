@@ -16,7 +16,7 @@ public:
 		cout << "Enter a number: ";
 		cin >> num;
 		cout << endl;
-	
+
 		//Cek apakah antrian penuh
 		if ((FRONT == 0 && REAR == MAX - 1) || (FRONT == REAR + 1)) {
 			cout << "\nQueue overflow\n";
@@ -59,6 +59,14 @@ public:
 				FRONT = FRONT + 1;
 		}
 	}
+	void display() {
+		int FRONT_position = FRONT;
+		int REAR_position = REAR;
 
+		//Cek apkaah antrian kosong
+		if (FRONT == -1) {
+			cout << "Queue is empty\n";
+			return;
+		}
 	}
 };
